@@ -14,7 +14,7 @@
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind -->
 
@@ -28,43 +28,83 @@
 
     body{
       font-family:'Inter',sans-serif;
-      background:#F7F3EA;
-      color:#2B2118;
+      background:#E7DECA;
+      color:#252320;
     }
 
-    h1,h2,h3{
-      font-family:'Cormorant Garamond',serif;
-      letter-spacing:-0.03em;
+    h1,h2,h3,
+    .font-serif{
+      font-family:'Space Grotesk',sans-serif;
+      letter-spacing:-0.04em;
+    }
+
+    nav a,
+    p.text-sm,
+    footer{
+      font-family:'IBM Plex Mono',monospace;
+    }
+
+    .btn-primary{
+      background:linear-gradient(180deg, #945450 0%, #713A37 100%);
+      color:#F5ECDC;
+      border:1px solid #5B2E2C;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.18),
+        inset 0 -3px 5px rgba(0,0,0,0.18),
+        0 4px 12px rgba(64,48,31,0.18);
+      transition:all 180ms ease;
+    }
+
+    .btn-primary:hover{
+      filter:brightness(1.08);
+      transform:translateY(-1px);
+    }
+
+    .btn-secondary{
+      background:linear-gradient(180deg, #F4EFE4 0%, #D8CFBF 100%);
+      color:#302D27;
+      border:1px solid #AFA28C;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.75),
+        inset 0 -3px 4px rgba(80,65,42,0.13),
+        0 4px 12px rgba(64,48,31,0.14);
+      transition:all 180ms ease;
+    }
+
+    .btn-secondary:hover{
+      filter:brightness(1.04);
+      transform:translateY(-1px);
+      border-color:#7A3F3C;
     }
 
   </style>
 
 </head>
 
-<body class="bg-[#F7F3EA] text-[#2B2118] antialiased">
+<body class="bg-[#E7DECA] text-[#252320] antialiased">
   <main class="mx-auto min-h-screen max-w-6xl px-8 md:px-16">
 
-    <nav class="sticky top-0 z-50 flex justify-between items-center py-6 backdrop-blur-md bg-[#F7F3EA]/80">
+    <nav class="sticky top-0 z-50 flex justify-between items-center py-6 backdrop-blur-md bg-[#E7DECA]/80">
 
-    <a href="#" class="tracking-[0.35em] text-sm font-semibold">
+    <a href="#" class="tracking-[0.35em] text-sm font-semibold text-[#252320]">
         SANDRO PRAKOSO
     </a>
 
-    <div class="hidden md:flex gap-8 text-sm text-[#5F554A]">
+    <div class="hidden md:flex gap-8 text-sm text-[#665F55]">
 
-        <a href="#writing" class="transition hover:text-[#B9822F]">
+        <a href="#writing" class="transition hover:text-[#7A3F3C]">
             Writing
         </a>
 
-        <a href="#projects" class="transition hover:text-[#B9822F]">
+        <a href="#projects" class="transition hover:text-[#7A3F3C]">
             Projects
         </a>
 
-        <a href="#now" class="transition hover:text-[#B9822F]">
+        <a href="#now" class="transition hover:text-[#7A3F3C]">
             Now
         </a>
 
-        <a href="#about" class="transition hover:text-[#B9822F]">
+        <a href="#about" class="transition hover:text-[#7A3F3C]">
             About
         </a>
 
@@ -72,136 +112,136 @@
       
     </nav>
 
-    <section class="flex min-h-[72vh] items-center border-y border-[#DDD5C8]">
+    <section class="flex min-h-[72vh] items-center border-y border-[#B9AD98]">
       <div class="max-w-4xl py-24">
-        <p class="mb-8 inline-flex rounded-full bg-[#ECE7DB] px-4 py-2 text-sm text-[#355A47]">
+        <p class="mb-8 inline-flex rounded-full bg-[#F8F2E7] px-4 py-2 text-sm text-[#425A57]">
           FP&A × Accounting × Tech
         </p>
 
-        <h1 class="font-serif text-6xl leading-[0.95] tracking-tight md:text-8xl">
+        <h1 class="font-serif text-6xl leading-[0.95] tracking-tight md:text-8xl text-[#252320]">
           Thoughtful finance.<br />
-          <span class="text-[#B9822F]">Built simply.</span>
+          <span class="text-[#7A3F3C]">Built simply.</span>
         </h1>
 
-        <p class="mt-10 max-w-2xl text-lg leading-8 text-[#5F554A] md:text-xl">
+        <p class="mt-10 max-w-2xl text-lg leading-8 text-[#665F55] md:text-xl">
           Financial modelling for everyday people.
         </p>
 
         <div class="mt-10 flex flex-wrap gap-4">
-          <a href="#writing" class="rounded-xl bg-[#3A2414] px-6 py-3 text-white hover:bg-[#4A321F]">
+          <a href="#writing" class="btn-primary rounded-xl px-6 py-3">
             Read writing →
           </a>
 
-          <a href="#projects" class="rounded-xl border border-[#D8D0C3] px-6 py-3 hover:border-[#B9822F]">
+          <a href="#projects" class="btn-secondary rounded-xl px-6 py-3">
             Explore projects
           </a>
         </div>
       </div>
     </section>
 
-    <section id="now" class="grid gap-10 border-b border-[#DDD5C8] py-20 md:grid-cols-3">
+    <section id="now" class="grid gap-10 border-b border-[#B9AD98] py-20 md:grid-cols-3">
       <div>
-        <p class="text-sm uppercase tracking-[0.25em] text-[#355A47]">Professional work</p>
-        <h2 class="mt-4 text-2xl font-medium">FP&A</h2>
-        <p class="mt-4 leading-7 text-[#6A635B]">
+        <p class="text-sm uppercase tracking-[0.25em] text-[#425A57]">Professional work</p>
+        <h2 class="mt-4 text-2xl font-medium text-[#252320]">FP&A</h2>
+        <p class="mt-4 leading-7 text-[#665F55]">
           Financial Modelling. Budget & Forecast. What, why, so what? 
         </p>
       </div>
 
       <div>
-        <p class="text-sm uppercase tracking-[0.25em] text-[#B9822F]">Building</p>
-        <h2 class="mt-4 text-2xl font-medium">Fulcrum</h2>
-        <p class="mt-4 leading-7 text-[#6A635B]">
+        <p class="text-sm uppercase tracking-[0.25em] text-[#7A3F3C]">Building</p>
+        <h2 class="mt-4 text-2xl font-medium text-[#252320]">Fulcrum</h2>
+        <p class="mt-4 leading-7 text-[#665F55]">
           CFO Logic in a box-  without the CFO price.
         </p>
       </div>
 
       <div>
-        <p class="text-sm uppercase tracking-[0.25em] text-[#355A47]">Learning</p>
-        <h2 class="mt-4 text-2xl font-medium">Software · Web dev · AI</h2>
-        <p class="mt-4 leading-7 text-[#6A635B]">
+        <p class="text-sm uppercase tracking-[0.25em] text-[#8B7A58]">Learning</p>
+        <h2 class="mt-4 text-2xl font-medium text-[#252320]">Software · Web dev · AI</h2>
+        <p class="mt-4 leading-7 text-[#665F55]">
           Anything is possible.
         </p>
       </div>
     </section>
 
-    <section id="writing" class="border-b border-[#DDD5C8] py-20">
+    <section id="writing" class="border-b border-[#B9AD98] py-20">
       <div class="flex items-end justify-between gap-6">
-        <h2 class="font-serif text-4xl md:text-5xl">Latest article</h2>
-        <a href="#" class="text-sm text-[#B9822F]">View all →</a>
+        <h2 class="font-serif text-4xl md:text-5xl text-[#252320]">Latest article</h2>
+        <a href="#" class="text-sm text-[#7A3F3C] hover:text-[#425A57]">View all →</a>
       </div>
 
-      <div class="mt-10 divide-y divide-[#DDD5C8]">
+      <div class="mt-10 divide-y divide-[#B9AD98]">
         <a href="#" class="block py-8 transition-all hover:pl-4">
-          <p class="text-sm text-[#355A47]">JUL 2026</p>
-          <h3 class="mt-2 text-2xl">Fulcrum #001</h3>
+          <p class="text-sm text-[#425A57]">JUL 2026</p>
+          <h3 class="mt-2 text-2xl text-[#252320]">Fulcrum #001</h3>
         </a>
 
         <a href="#" class="block py-8 transition-all hover:pl-4">
-          <p class="text-sm text-[#355A47]">JUL 2026</p>
-          <h3 class="mt-2 text-2xl">Forecasts start with assumptions.</h3>
+          <p class="text-sm text-[#425A57]">JUL 2026</p>
+          <h3 class="mt-2 text-2xl text-[#252320]">Forecasts start with assumptions.</h3>
         </a>
 
         <a href="#" class="block py-8 transition-all hover:pl-4">
-          <p class="text-sm text-[#355A47]">JUL 2026</p>
-          <h3 class="mt-2 text-2xl">Learning GitHub Pages.</h3>
+          <p class="text-sm text-[#425A57]">JUL 2026</p>
+          <h3 class="mt-2 text-2xl text-[#252320]">Learning GitHub Pages.</h3>
         </a>
       </div>
     </section>
 
-    <section id="projects" class="border-b border-[#DDD5C8] py-20">
-      <h2 class="font-serif text-4xl md:text-5xl">Projects</h2>
+    <section id="projects" class="border-b border-[#B9AD98] py-20">
+      <h2 class="font-serif text-4xl md:text-5xl text-[#252320]">Projects</h2>
 
       <div class="mt-10 grid gap-6 md:grid-cols-3">
-        <div class="rounded-2xl bg-white/60 p-7 ring-1 ring-[#E4DCCF]">
-          <p class="text-sm text-[#B9822F]">01</p>
-          <h3 class="mt-4 text-2xl">Fulcrum</h3>
-          <p class="mt-4 leading-7 text-[#6A635B]">
+        <div class="rounded-2xl bg-[#F8F2E7]/70 p-7 ring-1 ring-[#B9AD98]">
+          <p class="text-sm text-[#7A3F3C]">01</p>
+          <h3 class="mt-4 text-2xl text-[#252320]">Fulcrum</h3>
+          <p class="mt-4 leading-7 text-[#665F55]">
             Financial planning software for SMEs. Currently in early concept and MVP exploration.
           </p>
         </div>
 
-        <div class="rounded-2xl bg-white/60 p-7 ring-1 ring-[#E4DCCF]">
-          <p class="text-sm text-[#355A47]">02</p>
-          <h3 class="mt-4 text-2xl">Finance tools</h3>
-          <p class="mt-4 leading-7 text-[#6A635B]">
+        <div class="rounded-2xl bg-[#F8F2E7]/70 p-7 ring-1 ring-[#B9AD98]">
+          <p class="text-sm text-[#8B7A58]">02</p>
+          <h3 class="mt-4 text-2xl text-[#252320]">Finance tools</h3>
+          <p class="mt-4 leading-7 text-[#665F55]">
             Practical templates, models and planning frameworks for everyday business decisions.
           </p>
         </div>
 
-        <div class="rounded-2xl bg-white/60 p-7 ring-1 ring-[#E4DCCF]">
-          <p class="text-sm text-[#355A47]">03</p>
-          <h3 class="mt-4 text-2xl">AI experiments</h3>
-          <p class="mt-4 leading-7 text-[#6A635B]">
+        <div class="rounded-2xl bg-[#F8F2E7]/70 p-7 ring-1 ring-[#B9AD98]">
+          <p class="text-sm text-[#425A57]">03</p>
+          <h3 class="mt-4 text-2xl text-[#252320]">AI experiments</h3>
+          <p class="mt-4 leading-7 text-[#665F55]">
             Small experiments exploring how AI can improve finance workflows and decision-making.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="about" class="border-b border-[#DDD5C8] py-20">
-      <h2 class="font-serif text-4xl md:text-5xl">About</h2>
+    <section id="about" class="border-b border-[#B9AD98] py-20">
+      <h2 class="font-serif text-4xl md:text-5xl text-[#252320]">About</h2>
 
-      <p class="mt-8 max-w-3xl text-lg leading-8 text-[#5F554A]">
+      <p class="mt-8 max-w-3xl text-lg leading-8 text-[#665F55]">
         I'm Sandro Prakoso, a finance professional interested in making 
         finance easy to understand. This site is where I document
         the learnings across FP&A, technology, AI and product building.
       </p>
     </section>
 
-    <footer class="flex flex-col gap-6 py-10 text-sm text-[#6A635B] md:flex-row md:items-center md:justify-between">
+    <footer class="flex flex-col gap-6 py-10 text-sm text-[#665F55] md:flex-row md:items-center md:justify-between">
       <p>© 2026 Sandro Prakoso</p>
 
       <div class="flex gap-6">
-        <a href="#" class="hover:text-[#B9822F]">GitHub</a>
+        <a href="#" class="hover:text-[#7A3F3C]">GitHub</a>
         
         <a href="https://www.linkedin.com/in/sandroprakoso/"
    target="_blank"
    rel="noopener noreferrer"
-   class="hover:text-[#B9822F]">
+   class="hover:text-[#7A3F3C]">
     LinkedIn</a>
         
-        <a href="#" class="hover:text-[#B9822F]">Email</a>
+        <a href="#" class="hover:text-[#7A3F3C]">Email</a>
       </div>
     </footer>
 
