@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My First Article | Sandro Prakoso</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --background: #E7DECA;
+      --text: #252320;
+      --muted: #665F55;
+      --green: #425A57;
+      --red-brown: #7A3F3C;
+      --card: #F3EBDD;
+      --border: #B9AD98;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Inter, system-ui, sans-serif;
+      line-height: 1.75;
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+
+    nav {
+      margin-bottom: 72px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 13px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    .eyebrow {
+      font-family: "IBM Plex Mono", monospace;
+      color: var(--red-brown);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 12px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      margin: 0 0 24px;
+    }
+
+    .meta {
+      color: var(--muted);
+      margin-bottom: 56px;
+    }
+
+    article {
+      background: rgba(243, 235, 221, 0.55);
+      border: 1px solid rgba(185, 173, 152, 0.6);
+      border-radius: 28px;
+      padding: 36px;
+    }
+
+    article p {
+      margin: 0 0 24px;
+    }
+
+    article h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 32px;
+      letter-spacing: -0.03em;
+      margin: 48px 0 18px;
+    }
+
+    article ul {
+      padding-left: 22px;
+    }
+
+    article li {
+      margin-bottom: 12px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 48px;
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 40px 18px 72px;
+      }
+
+      article {
+        padding: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <nav>
+      <a href="/">← Back to ronds.au</a>
+    </nav>
+
+    <header>
+      <div class="eyebrow">Writing</div>
+      <h1>My First Article</h1>
+      <p class="meta">Published 30 July 2026 · By Sandro Prakoso</p>
+    </header>
+
+    <article>
+      <p>
+        Write your opening paragraph here. This should introduce the article in a simple,
+        direct way.
+      </p>
+
+      <p>
+        Write your second paragraph here. Keep it practical, clear and useful.
+      </p>
+
+      <h2>Section heading</h2>
+
+      <p>
+        Add more thoughts here. This template is intentionally simple so articles stay easy
+        to publish and maintain.
+      </p>
+
+      <ul>
+        <li>First point.</li>
+        <li>Second point.</li>
+        <li>Third point.</li>
+      </ul>
+
+      <p>
+        Finish with a clear takeaway.
+      </p>
+    </article>
+
+    <a class="back-link" href="/">Back to homepage</a>
+  </main>
+</body>
+</html>
