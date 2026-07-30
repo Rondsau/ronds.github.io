@@ -161,13 +161,13 @@
 <body class="bg-[#E7DECA] text-[#252320] antialiased">
   <main class="mx-auto min-h-screen max-w-6xl px-8 md:px-16">
 
-    <nav class="sticky top-0 z-50 flex justify-between items-center py-6 bg-[#E7DECA]/95 border-b border-[#B9AD98]/40">
+    <nav class="sticky top-0 z-50 flex flex-wrap justify-between items-center gap-y-4 py-6 bg-[#E7DECA]/95 border-b border-[#B9AD98]/40">
 
-    <a href="#" class="tracking-[0.35em] text-sm font-semibold text-[#252320]">
+    <a href="/" class="tracking-[0.35em] text-sm font-semibold text-[#252320]">
         SANDRO PRAKOSO
     </a>
 
-    <div class="hidden md:flex gap-8 text-sm text-[#665F55]">
+    <div class="flex w-full justify-between gap-4 text-xs text-[#665F55] sm:w-auto sm:justify-start sm:gap-6 md:gap-8 md:text-sm">
 
         <a href="#writing" class="transition hover:text-[#7A3F3C]">
             Articles
@@ -243,7 +243,7 @@
     <section id="writing" class="border-b border-[#B9AD98] py-20">
       <div class="flex items-end justify-between gap-6">
         <h2 class="font-serif text-4xl md:text-5xl text-[#252320]">Latest article</h2>
-        <a href="#" class="text-sm text-[#7A3F3C] hover:text-[#425A57]">View all →</a>
+        <a href="/articles/" class="text-sm text-[#7A3F3C] hover:text-[#425A57]">View all →</a>
       </div>
 
       <div class="mt-10 divide-y divide-[#B9AD98]">
@@ -257,19 +257,21 @@
   </p>
 </a>
 
-       <a href="#" class="writing-link block py-8">
+       <div class="block py-8">
           <p class="text-sm text-[#425A57]">JUL 2026</p>
      <h3 class="mt-2 text-2xl text-[#252320] transition-colors duration-200">
   DUIT #001
 </h3>
-        </a>
+          <p class="mt-3 text-xs uppercase tracking-[0.2em] text-[#8B7A58]">Coming soon</p>
+        </div>
 
-       <a href="#" class="writing-link block py-8">
+       <div class="block py-8">
           <p class="text-sm text-[#425A57]">JUL 2026</p>
 <h3 class="mt-2 text-2xl text-[#252320] transition-colors duration-200">
   Rosetta #001
 </h3>
-        </a>
+          <p class="mt-3 text-xs uppercase tracking-[0.2em] text-[#8B7A58]">Coming soon</p>
+        </div>
       </div>
     </section>
 
@@ -343,7 +345,7 @@
         LinkedIn
       </a>
 
-      <a href="mailto:sandro.prakoso@gmail.com" target="_blank" rel="noopener noreferrer" class="transition duration-300 hover:text-[#B9822F]">
+      <a href="mailto:sandro.prakoso@gmail.com" class="transition duration-300 hover:text-[#B9822F]">
         Email
       </a>
     </div>
