@@ -1,171 +1,338 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My First Article | Sandro Prakoso</title>
+  <meta charset="utf-8">
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>So It Begins | Sandro Prakoso</title>
+
+  <meta
+    name="description"
+    content="The first article in a series about building software that helps small business owners understand the cash impact of their decisions."
+  >
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    :root {
-      --background: #E7DECA;
-      --text: #252320;
-      --muted: #665F55;
-      --green: #425A57;
-      --red-brown: #7A3F3C;
-      --card: #F3EBDD;
-      --border: #B9AD98;
-    }
-
-    * {
-      box-sizing: border-box;
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      margin: 0;
-      background: var(--background);
-      color: var(--text);
-      font-family: Inter, system-ui, sans-serif;
-      line-height: 1.75;
+      font-family: "Inter", sans-serif;
+      background: #E7DECA;
+      color: #252320;
     }
 
-    main {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 64px 24px 96px;
-    }
-
-    nav {
-      margin-bottom: 72px;
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 13px;
-    }
-
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      color: var(--text);
-    }
-
-    .eyebrow {
-      font-family: "IBM Plex Mono", monospace;
-      color: var(--red-brown);
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 12px;
-      margin-bottom: 18px;
-    }
-
-    h1 {
+    h1,
+    h2,
+    h3 {
       font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(42px, 7vw, 72px);
-      line-height: 0.95;
-      letter-spacing: -0.05em;
-      margin: 0 0 24px;
     }
 
-    .meta {
-      color: var(--muted);
-      margin-bottom: 56px;
+    .mono {
+      font-family: "IBM Plex Mono", monospace;
     }
 
-    article {
-      background: rgba(243, 235, 221, 0.55);
-      border: 1px solid rgba(185, 173, 152, 0.6);
-      border-radius: 28px;
-      padding: 36px;
+    .article-body p {
+      margin-top: 1.5rem;
+      font-size: 1.0625rem;
+      line-height: 1.9;
+      color: #4F4941;
     }
 
-    article p {
-      margin: 0 0 24px;
+    .article-body h2 {
+      margin-top: 4rem;
+      font-size: 1.875rem;
+      line-height: 1.25;
+      font-weight: 600;
+      color: #252320;
     }
 
-    article h2 {
+    .article-body blockquote {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      border-left: 3px solid #B9822F;
+      padding: 0.75rem 0 0.75rem 1.5rem;
       font-family: "Space Grotesk", sans-serif;
-      font-size: 32px;
-      letter-spacing: -0.03em;
-      margin: 48px 0 18px;
+      font-size: 1.35rem;
+      line-height: 1.6;
+      color: #425A57;
     }
 
-    article ul {
-      padding-left: 22px;
-    }
-
-    article li {
-      margin-bottom: 12px;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-top: 48px;
-      color: var(--green);
-      text-decoration: none;
+    .article-body strong {
+      color: #252320;
       font-weight: 600;
     }
 
-    .back-link:hover {
-      text-decoration: underline;
+    .article-link {
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
     }
 
-    @media (max-width: 640px) {
-      main {
-        padding: 40px 18px 72px;
-      }
+    .article-link:hover {
+      color: #425A57;
+    }
 
-      article {
-        padding: 26px;
-      }
+    ::selection {
+      background: #B9822F;
+      color: #F3EBDD;
     }
   </style>
 </head>
 
 <body>
+  <!-- Navigation -->
+  <header class="border-b border-[#B9AD98]">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 md:px-10">
+      <a
+        href="/"
+        class="text-xl font-semibold tracking-tight text-[#252320]"
+        style="font-family: 'Space Grotesk', sans-serif;"
+      >
+        Sandro Prakoso
+      </a>
+
+      <a
+        href="/#writing"
+        class="mono text-xs uppercase tracking-[0.18em] text-[#665F55] transition-colors hover:text-[#7A3F3C]"
+      >
+        Back to writing
+      </a>
+    </div>
+  </header>
+
   <main>
-    <nav>
-      <a href="/">← Back to ronds.au</a>
-    </nav>
+    <!-- Article Header -->
+    <section class="border-b border-[#B9AD98]">
+      <div class="mx-auto max-w-4xl px-6 py-16 md:px-10 md:py-24">
+        <a
+          href="/#writing"
+          class="mono text-xs uppercase tracking-[0.2em] text-[#7A3F3C] transition-colors hover:text-[#425A57]"
+        >
+          Writing
+        </a>
 
-    <header>
-      <div class="eyebrow">Writing</div>
-      <h1>My First Article</h1>
-      <p class="meta">Published 30 July 2026 · By Sandro Prakoso</p>
-    </header>
+        <p class="mono mt-10 text-xs uppercase tracking-[0.2em] text-[#425A57]">
+          30 July 2026
+        </p>
 
-    <article>
-      <p>
-        Write your opening paragraph here. This should introduce the article in a simple,
-        direct way.
-      </p>
+        <h1 class="mt-5 max-w-3xl text-5xl font-semibold leading-[1.05] tracking-[-0.04em] text-[#252320] md:text-7xl">
+          So It Begins
+        </h1>
 
-      <p>
-        Write your second paragraph here. Keep it practical, clear and useful.
-      </p>
+        <p class="mt-8 max-w-2xl text-xl italic leading-8 text-[#665F55] md:text-2xl">
+          We start with a single problem worth solving
+        </p>
 
-      <h2>Section heading</h2>
+        <div class="mt-12 h-[3px] w-16 rounded-full bg-[#B9822F]"></div>
+      </div>
+    </section>
 
-      <p>
-        Add more thoughts here. This template is intentionally simple so articles stay easy
-        to publish and maintain.
-      </p>
+    <!-- Article Body -->
+    <article class="mx-auto max-w-3xl px-6 py-16 md:px-10 md:py-24">
+      <div class="article-body">
+        <p>
+          Most small business owners are very good at what they do. A plumber knows pipes.
+          A designer understands visuals. A mechanic can hear a problem before opening the
+          bonnet. They built their businesses around a craft they understand.
+        </p>
 
-      <ul>
-        <li>First point.</li>
-        <li>Second point.</li>
-        <li>Third point.</li>
-      </ul>
+        <p>
+          But running a business eventually asks them to become good at something else:
+          managing money.
+        </p>
 
-      <p>
-        Finish with a clear takeaway.
-      </p>
+        <p>
+          The questions usually become more difficult as the business grows. Can I afford
+          to hire someone? Should I buy that expensive equipment? Can I take on a bigger
+          project? Will I still have enough cash to pay wages, suppliers and tax if a
+          customer pays late?
+        </p>
+
+        <p>
+          Many of these decisions are made using experience, gut feel and whatever the bank
+          balance says that day. Sometimes that is enough. Sometimes it is not.
+        </p>
+
+        <h2>The tools exist—but not for everyone</h2>
+
+        <p>
+          Larger businesses have finance teams and increasingly powerful tools. They use
+          forecasts, dashboards and financial models to test decisions before committing
+          to them. They can see how hiring someone, investing in equipment or changing
+          prices may affect profit and cash over time.
+        </p>
+
+        <p>
+          They may also have financial analysts, finance business partners or a CFO helping
+          management interpret the numbers. Their role is not only to explain what happened
+          last month. It is to help the business think about what might happen next.
+        </p>
+
+        <p>
+          Most sole traders and small business owners do not have that support. Hiring an
+          experienced finance professional can be expensive, particularly when the business
+          is still growing. An accountant can provide valuable advice, but the owner may
+          need answers between appointments, often while making decisions in real time.
+        </p>
+
+        <p>
+          They are not trying to become finance experts. They usually want help answering
+          one practical question:
+        </p>
+
+        <blockquote>
+          Can my business afford to do this?
+        </blockquote>
+
+        <h2>Profit does not always mean cash</h2>
+
+        <p>
+          The answer is often more complicated than checking the bank account.
+        </p>
+
+        <p>
+          A business can be profitable and still run short of cash. It might win a large
+          project but need to pay staff and suppliers weeks before the customer pays. It
+          might hire someone expecting sales to grow, only to discover that wages arrive
+          faster than new revenue. It might buy equipment that improves the business but
+          leaves too little cash for tax or quieter months.
+        </p>
+
+        <p>
+          These are often timing problems rather than profit problems.
+        </p>
+
+        <p>
+          People working in finance understand the difference because we spend years
+          looking at budgets, forecasts and financial statements. A small business owner
+          may never have been taught how these pieces connect. They may know sales are
+          growing but still wonder why money always feels tight.
+        </p>
+
+        <p>
+          The numbers exist. What is missing is a simple way to understand what they mean
+          before making the next decision.
+        </p>
+
+        <h2>Starting with the decision</h2>
+
+        <p>
+          That is the problem I have started exploring through a software project.
+        </p>
+
+        <p>
+          The aim is not to turn every business owner into an accountant. It is not to
+          squeeze corporate finance software into a smaller screen. It is also not to
+          create another dashboard full of impressive charts that still leaves the user
+          asking what to do.
+        </p>
+
+        <p>
+          The experience should begin with the decision itself. What are you considering?
+          What will it cost? When will the money leave the business? When might the benefit
+          arrive? What else needs to be paid in the meantime?
+        </p>
+
+        <p>
+          The financial logic can remain underneath. The user should not need to understand
+          accounting terminology or build a complicated spreadsheet just to get a useful
+          view of the possible impact on cash.
+        </p>
+
+        <p>
+          My background is in finance, planning and analysis, so building the calculations
+          is familiar territory. Turning that thinking into software is not.
+        </p>
+
+        <p>
+          A spreadsheet makes sense to the person who built it. Software has to make sense
+          to someone seeing it for the first time. It has to ask the right questions, use
+          normal language and provide useful information without creating false confidence.
+        </p>
+
+        <p>
+          I am beginning to think the hardest part will not be the maths. It will be deciding
+          how much of the maths the user should ever need to see.
+        </p>
+
+        <h2>The first step</h2>
+
+        <p>
+          This is the first article in a series about developing the project. I will share
+          the problems, product decisions and lessons involved in turning financial thinking
+          into something more accessible.
+        </p>
+
+        <p>
+          Small business owners should not need a finance degree or a CFO on call to
+          understand whether their next move could help the business grow or put its cash
+          under pressure.
+        </p>
+
+        <p>
+          That is the problem I want to work on.
+        </p>
+
+        <p>
+          This is the first step.
+        </p>
+
+        <p class="text-xl font-medium text-[#252320]">
+          So it begins.
+        </p>
+      </div>
+
+      <!-- Article Footer -->
+      <footer class="mt-20 border-t border-[#B9AD98] pt-10">
+        <p class="mono text-xs uppercase tracking-[0.18em] text-[#665F55]">
+          Written by Sandro Prakoso
+        </p>
+
+        <a
+          href="/#writing"
+          class="article-link mt-6 inline-block text-sm text-[#7A3F3C] underline transition-colors"
+        >
+          ← Back to all writing
+        </a>
+      </footer>
     </article>
-
-    <a class="back-link" href="/">Back to homepage</a>
   </main>
+
+  <!-- Site Footer -->
+  <footer class="border-t border-[#B9AD98]">
+    <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 md:flex-row md:items-center md:justify-between md:px-10">
+      <p class="mono text-xs text-[#665F55]">
+        © 2026 Sandro Prakoso
+      </p>
+
+      <a
+        href="/"
+        class="mono text-xs text-[#665F55] transition-colors hover:text-[#425A57]"
+      >
+        ronds.au
+      </a>
+    </div>
+  </footer>
 </body>
 </html>
