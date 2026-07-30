@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Articles | Sandro Prakoso</title>
+  <meta name="description" content="Articles by Sandro Prakoso about finance, technology and building products.">
+  <link rel="icon" type="image/png" href="/favicon.png.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: "Inter", sans-serif; background: #E7DECA; color: #252320; }
+    h1, h2 { font-family: "Space Grotesk", sans-serif; }
+    .mono { font-family: "IBM Plex Mono", monospace; }
+    .article-card { transition: color 220ms ease, transform 220ms cubic-bezier(0.16, 1, 0.3, 1); }
+    .article-card:hover { color: #7A3F3C; transform: translateX(6px); }
+    @media (prefers-reduced-motion: reduce) { .article-card { transition: none; } .article-card:hover { transform: none; } }
+  </style>
+</head>
+<body class="antialiased">
+  <header class="border-b border-[#B9AD98]">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 md:px-10">
+      <a href="/" class="text-xl font-semibold tracking-tight text-[#252320]" style="font-family: 'Space Grotesk', sans-serif;">Sandro Prakoso</a>
+      <a href="/" class="mono text-xs uppercase tracking-[0.18em] text-[#665F55] transition-colors hover:text-[#7A3F3C]">← Home</a>
+    </div>
+  </header>
+
+  <main class="mx-auto min-h-[75vh] max-w-4xl px-6 py-16 md:px-10 md:py-24">
+    <p class="mono text-xs uppercase tracking-[0.2em] text-[#425A57]">Writing</p>
+    <h1 class="mt-5 text-5xl font-semibold tracking-[-0.04em] md:text-7xl">Articles</h1>
+    <p class="mt-6 max-w-2xl text-lg leading-8 text-[#665F55]">Notes on finance, technology and building useful products.</p>
+
+    <div class="mt-16 border-y border-[#B9AD98]">
+      <a href="/articles/fulcrum.001.html" class="article-card block py-8">
+        <p class="mono text-xs uppercase tracking-[0.2em] text-[#425A57]">30 July 2026</p>
+        <h2 class="mt-3 text-2xl text-[#252320]">Fulcrum #001: So it begins</h2>
+        <p class="mt-3 leading-7 text-[#5F554A]">An idea I’ve carried for a while. Now I’m building it.</p>
+      </a>
+    </div>
+  </main>
+
+  <footer class="border-t border-[#B9AD98]">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-8 md:px-10">
+      <p class="mono text-xs text-[#665F55]">© 2026 Sandro Prakoso</p>
+      <a href="/" class="mono text-xs text-[#665F55] transition-colors hover:text-[#425A57]">ronds.au</a>
+    </div>
+  </footer>
+</body>
+</html>
